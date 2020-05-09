@@ -11,5 +11,9 @@
 </script>
 
 <style scoped>
-
+#backstage {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+}
 </style>

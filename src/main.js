@@ -19,7 +19,9 @@ import {
   DropdownMenu,
   Button,
   Pagination,
-  Link
+  Link,
+  Calendar,
+  Autocomplete
 } from 'element-ui';
 import { link } from 'fs';
 // import 'element-ui/lib/theme-chalk/display.css';
@@ -44,6 +46,8 @@ Vue.use(DropdownMenu);
 Vue.use(Button);
 Vue.use(Pagination);
 Vue.use(Link);
+Vue.use(Calendar);
+Vue.use(Autocomplete);
 
 new Vue({
   router,

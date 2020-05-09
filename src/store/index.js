@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    isBackstage: '/'
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    changeNavMenu(state,name) {
+      state.isBackstage = name;
+    }
   }
 })

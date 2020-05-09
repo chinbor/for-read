@@ -15,38 +15,55 @@ const Categories = () => import('views/categories/Categories');
 const routes = [
   {
     path: '',
-    redirect: '/home'
+    components: {
+      notbackstage: Home 
+    }
   },
   {
-    path: '/home',
-    component: Home
+    path: '/page/:page',
+    components: {
+      notbackstage: Home 
+    }
   },
   {
     path: '/archives',
-    component: Archives
+    components: {
+      notbackstage: Archives
+    }
   },
   {
     path: '/categories',
-    component: Categories
+    components: {
+      notbackstage: Categories
+    }
   },
   {
     path: '/tags',
-    component: Tags
+    components: {
+      notbackstage: Tags
+    }
   },
   {
     path: '/about',
-    component: About
+    components: {
+      notbackstage: About
+    }
   },
   {
     path: '/backstage',
-    component: Backstage
+    components: {
+      backstage: Backstage
+    }
   },
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 });
 
 export default router
